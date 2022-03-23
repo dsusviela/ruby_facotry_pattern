@@ -28,7 +28,7 @@ But it is fixable!
 
 Inside the `factory-example` folder you will find a more elegant solution to the problem the team was facing. Yes it uses the factory pattern, how did you know?.
 
-For this example, we could have a *supoprt class* for each metric, a *metric class* to be the interface and *a factory* to produce the aftermentioned support classes. In ruby its not uncommon to have the interface class be mixed with the facotry (kill to birds with the same stone), but there are some purists that don't like that. If you are one of said purists you can `git checkout metric-factory-alternative` and see that.
+For this example, we could have a *supoprt class* for each metric, a *metric class* to be the interface and *a factory* to produce the aftermentioned support classes. In ruby its not uncommon to have the interface class be mixed with the facotry (kill two birds with the same stone), but there are some purists that don't like that. If you are one of said purists you can `git checkout metric-factory-alternative`.
 
 If you go into `main.rb` you'll see that the code is very staright forward; for each metric we ask the common interface to `put_information`. Then in `classes/metric.rb` we make the decision of which child to create and finally we make the call to said child.
 
