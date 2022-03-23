@@ -1,4 +1,4 @@
-class Metric; end
+require_relative "./metric"
 
 class Power < Metric
   def initialize

@@ -1,4 +1,4 @@
-class Metric; end
+require_relative "./metric"
 
 class Revenues < Metric
   def initialize
