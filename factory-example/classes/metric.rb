@@ -4,7 +4,7 @@ require_relative "./revenues"
 require_relative "./reviews"
 
 class Metric
-  def self.put_information(metric)
+  def self.create_for(metric:)
     klass = if metric == "downloads"
       Downloads
     elsif metric == "power"
@@ -17,7 +17,7 @@ class Metric
       raise RuntimeError
     end
 
-    klass.new.put_information
+    klass.new
   end
 
   def initialize

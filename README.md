@@ -4,7 +4,7 @@ In this repo you'll see an example of the Factory pattern written in ruby.
 
 ## What is the factory pattern
 
-On a highlevel, the factory pattern is the creation of some support classes that enable the programmer a choice between different implementations of an interface.
+On a highlevel, the factory pattern is the creation of some support classes that enable the programmer a choice between different implementations of an interface through a class named the "factory".
 
 ## UML diagram
 
@@ -33,3 +33,5 @@ For this example, we could have a *supoprt class* for each metric, a *metric cla
 If you go into `main.rb` you'll see that the code is very staright forward; for each metric we ask the common interface to `put_information`. Then in `classes/metric.rb` we make the decision of which child to create and finally we make the call to said child.
 
 The advantage of this approach is that the addition of new behavior (that is if we want to add more metrics) is fairly straightforward. We would simply need to create a new class. Another advantage is that if we want to make changes to an existing class we can also do that by simply changing the individual methods. Remember that inheritance can also give us the benefit of DRY if we want to. In this example, the whole make and fetch the response from the api is in the parent class.
+
+Also if per each metric we wanted to extend the interface to add a "process" method that simply does some standard calculations on them (i.e; calculate averages or what not) we could easily expand the interface to do this, and add the implementation on each children.
